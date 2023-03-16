@@ -1,0 +1,96 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.menuIcon {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon::before {
+  top: -0.5rem;
+}
+
+.menuIcon::after {
+  top: 0.5rem;
+}
+
+.menuButton:hover .menuIcon::before {
+  transform: translateY(-0.25rem);
+}
+
+.menuButton:hover .menuIcon::after {
+  transform: translateY(0.25rem);
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuList li {
+  margin-bottom: 1rem;
+}
+
+.menuList li:last-child {
+  margin-bottom: 0;
+}
+
+.menuList li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.menuList li a:hover {
+  color: #ffc107;
+}
